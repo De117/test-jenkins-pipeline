@@ -2,10 +2,10 @@ node {
     checkout scm
 
     stage("Do something") {
-        sh "echo blah"
+        sh "whoami && groups && pwd && ls -al"
     }
 
     stage("Do something else") {
-        sh "pwd && ls -lh"
+        sh "ls -l /var/lib/jenkins/secrets"
     }
 }
