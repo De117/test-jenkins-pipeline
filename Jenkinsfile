@@ -6,6 +6,6 @@ node {
     }
 
     stage("Do something else") {
-        sh "echo something else"
+        sh "pwd && ls -lh"
     }
 }
