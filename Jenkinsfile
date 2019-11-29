@@ -6,6 +6,7 @@ node {
     }
 
     stage("Do something else") {
-        sh "ls -l /var/lib/jenkins/secrets"
+        sh "ls -al /var/lib/jenkins/secrets"
+        sh "cat /var/lib/jenkins/secrets/master.key | wc"
     }
 }
