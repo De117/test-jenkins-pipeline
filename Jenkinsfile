@@ -3,10 +3,7 @@ node {
 
     stage("Do something") {
         sh "whoami && groups && pwd && ls -al"
-    }
-
-    stage("Do something else") {
-        sh "ls -al /var/lib/jenkins/secrets"
-        sh "cat /var/lib/jenkins/secrets/master.key | wc"
+        echo "Trying to build another job"
+        build(job: 'MobQualityDashboard', propagate: true, quietPeriod: 10, wait: true)
     }
 }
